@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Design website</title>
+    <meta name='viewport' content='user-scalable=no,width=device-width, initial-scale=1, maximum-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='v4.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="topNav">
+        <div class="category">Design</div>
+        <div class="links">
+            <a href="https://github.com/emmy0021" target="_blank" class="fa fa-github fa-2x"></a>
+            <a href="https://www.linkedin.com/in/emmanuel-oyervides" target="_blank" class="fa fa-linkedin fa-2x"></a>
+
+        </div>
+    </div>
+
+    <div class="mainText">
+        <h1>I build amazing experiences</h1>
+        <h2>UI / IX Designer from El Paso, TX.</h2>
+        <img src="./public/webDesign.png" class="mainImg" alt="">
+
+    </div>
+
+    <div class="portfolio">
+        <h2 id="portfolioLabel">Portfolio</h2>
+        <h2 class="view" id="view">View all work</h2>
+
+
+        <div class="items" id="items">
+        </div>
+    </div>
+
+    <div class="nav">
+        <div id="selector" class="selectCircle"></div>
+
+        <div class="tab1  homeLabel" onclick="homeF()">
+            <div class="houseIcon homeSelected" id="houseIcon"></div>
+        </div>
+
+        <div class="tab2" onclick="pfolio()">
+            <div class="portfolioIcon" id="portfolioIcon"></div>
+        </div>
+
+        <div class="tab3" id="aboutMe" onclick="aboutMe()">
+            <div class="profileIcon" id="profileIcon">
+                <div class="profileBody"></div>
+            </div>
+        </div>
+
+        <div class="tab4" onclick="contactMe()">
+            <div class="mailIcon" id="mailIcon"></div>
+        </div>
+
+    </div>
+
+    <div class="portfolioTab">
+
+
+    </div>
+
+    <div class="profile" id="profile">
+        <div class="info">
+            <img src="./public/me.jpg" alt="" class="profilePic">
+            <h1>Emmanuel Oyervides</h1>
+            <h2 class="profileCity">El Paso, Texas</h2>
+
+            <h2 class="profileDescription">Website Designer | Full Stack Developer</h2>
+
+        </div>
+        <div class="skills">
+            <h2 class="skillsLabel">SKILLS</h2>
+            <div class="skill">C++</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">Java</div>
+            <div class="skill">Python</div>
+            <div class="skill">Ruby on Rails</div>
+            <div class="skill">UI/UX</div>
+            <div class="skill">SQL</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">API</div>
+        </div>
+        <div class="links"></div>
+
+    </div>
+
+    <div class="contact" id="contact">
+        <h1>Contact Me</h1>
+        <div class="form">
+            <label for="name">Name</label>
+            <input type="text" class="name" id="name">
+            <label for="email">Email</label>
+            <input type="text" class="email" id="email">
+            <label for="msg">Message</label>
+            <textarea name="msg" id="msg" cols="38" rows="6"></textarea>
+            <button class="sendMsg">SEND MESSAGE</button>
+        </div>
+
+    </div>
+
+    <div class="preview" id="preview">
+        <div class="exitPreview" id="exitPreview"></div>
+        <img src="" alt="" class="previewImg" id="previewImg">
+    </div>
+
+
+
+    <script src='v4.js'></script>
+</body>
+
+</html>

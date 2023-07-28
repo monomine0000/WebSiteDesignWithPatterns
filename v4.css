@@ -1,0 +1,649 @@
+:root {
+    --navBar-color: #FFFFFF;
+    --background-color: #142634;
+
+    --house-border-color: #FFFFFF;
+    /*FFFFFF*/
+    --portfolio-border-color: #142634;
+    --profile-border-color: #142634;
+    --mail-border-color: #142634;
+
+
+    --text-color: #FFFFFF;
+    --alt-text-color: #FF6969;
+
+    --gray-color: #C4C4C4;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+
+.nav {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    position: absolute;
+    background: linear-gradient(180deg, #FBEEFF 0%, rgba(146, 128, 153, 0) 100%), #FFFFFF;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3), inset 0px -3px 5px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-areas: 'tab1 tab2 tab3 tab4';
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
+    z-index: 10;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.tab1,
+.tab2,
+.tab3,
+.tab4 {
+    overflow: hidden;
+    fill: currentColor;
+}
+
+.houseIcon {
+    transition: top .6s;
+    width: 15px;
+    height: 12.5px;
+    position: absolute;
+    bottom: 29px;
+    left: 42.7px;
+    border-left: solid 2.75px var(--house-border-color);
+    border-right: solid 2.75px var(--house-border-color);
+    border-bottom: solid 2.75px var(--house-border-color);
+    border-radius: 2px 2px 4px 4px;
+    top: 31px;
+
+
+}
+
+.portfolioIcon {
+    width: 21px;
+    height: 15px;
+    position: absolute;
+    left: 34.4%;
+    bottom: 34%;
+    border: 2.7px solid var(--portfolio-border-color);
+    border-radius: 4px;
+    transition: top .6s;
+    top: 25.5px;
+}
+
+.profileIcon {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--profile-border-color);
+    box-sizing: border-box;
+    border-radius: 23px;
+    overflow: hidden;
+    left: 59%;
+    position: absolute;
+    top: 20px;
+    transition: top .6s;
+
+
+}
+
+.mailIcon {
+    width: 27px;
+    height: 20px;
+    position: absolute;
+    box-sizing: border-box;
+    border: solid 2.7px var(--mail-border-color);
+    border-radius: 3px;
+    left: 81.5%;
+    bottom: 25.5px;
+    transition: top .6s;
+    top: 24.5px;
+}
+
+
+
+
+.homeSelected {
+    position: absolute;
+    top: -5px;
+
+}
+
+.portfolioSelected {
+    position: absolute;
+    top: -10px;
+}
+
+.profileSelected {
+    position: absolute;
+    top: -13px;
+}
+
+.mailSelected {
+    position: absolute;
+    top: -11px;
+}
+
+.homeLabel::after {
+    content: 'Home';
+    left: 21px;
+    top: 19px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.portfolioLabel::after {
+    content: 'Portfolio';
+    left: 12px;
+    top: 19px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.profileLabel::after {
+    content: 'Profile';
+    left: 22px;
+    top: 19px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.mailLabel::after {
+    content: 'Contact';
+    left: 8px;
+    top: 19px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+
+
+.houseIcon::before {
+    content: "";
+    border-left: solid 2.75px var(--house-border-color);
+    border-top: solid 2.75px var(--house-border-color);
+    height: 11.5px;
+    width: 11.5px;
+    display: block;
+    position: relative;
+    left: 0.5px;
+    top: -7.1px;
+    transform: rotate(45deg);
+    border-radius: 27px 13px 9pc 13px;
+}
+
+.houseIcon::after {
+    content: "";
+    height: 12px;
+    width: 6.5px;
+    display: block;
+    position: relative;
+    background-color: var(--house-border-color);
+    left: 4px;
+    bottom: 11px;
+    border-radius: 5px 5px 0 0;
+}
+
+.selectCircle {
+    background-color: var(--background-color);
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: -19px;
+    left: 33px;
+    border-radius: 29px;
+    transition: left .6s;
+}
+
+.Sethome {
+    left: 35px;
+}
+
+.Setpfolio {
+    left: 32.6%;
+}
+
+.Setpfile {
+    left: 57.6%;
+}
+
+.Setemail {
+    left: 79.9%
+}
+
+
+
+.portfolioIcon::before {
+    content: '';
+    width: 10px;
+    position: relative;
+    height: 1px;
+    border: 2.7px solid var(--portfolio-border-color);
+    display: inherit;
+    left: 3px;
+    top: -7px;
+    border-radius: 4px 4px 0 0;
+}
+
+
+
+.profileBody {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 2px solid var(--profile-border-color);
+    position: relative;
+    left: -3px;
+    bottom: -14.5px;
+    border-radius: 33px;
+}
+
+.profileBody::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: inherit;
+    border: solid 2px var(--profile-border-color);
+    top: -14px;
+    left: 8px;
+    position: relative;
+    border-radius: 11px;
+}
+
+
+
+.mailIcon::before {
+    content: '';
+    width: 16px;
+    height: 3px;
+    background: var(--mail-border-color);
+    position: absolute;
+    transform: rotate(45deg);
+    left: -2px;
+    top: 3px;
+    border-radius: 0 0 10px 0;
+}
+
+.mailIcon::after {
+    content: '';
+    width: 16px;
+    height: 3px;
+    background: var(--mail-border-color);
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 8px;
+    top: 3px;
+    border-radius: 0 0 0 10px;
+}
+
+.mainText {
+    top: 4px;
+    position: relative;
+}
+
+.mainText h1 {
+    position: relative;
+    width: 193px;
+    height: 122px;
+    left: 28px;
+    top: 67px;
+    font-family: 'Tajawal', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 55px;
+    color: var(--text-color);
+}
+
+.mainText h2,
+.portfolio h2 {
+    position: relative;
+    width: auto;
+    height: 23px;
+    left: 28px;
+    font-family: Tajawal;
+    font-weight: 500;
+    color: var(--gray-color);
+
+}
+
+.portfolio h2 {
+    top: 28px;
+    font-size: 19px;
+}
+
+.mainText h2 {
+    top: 88px;
+    font-size: 26px;
+}
+
+.view {
+    color: var(--alt-text-color) !important;
+    position: relative !important;
+    left: 25px !important;
+
+}
+
+
+
+
+.portfolio h2 {
+    top: 16px;
+    font-weight: 700;
+    font-size: 25px;
+    color: #FFFCFC;
+    display: inline;
+}
+
+.portfolio h2:first-child {
+    padding-right: 25%;
+
+}
+
+.portfolio {
+    bottom: -110px;
+    left: 0;
+    right: 0;
+    height: 36vh;
+    position: relative;
+}
+
+
+
+
+.view::before {
+    content: '';
+    width: 8px;
+    border-top: solid 2.5px var(--alt-text-color);
+    border-right: solid 2.5px var(--alt-text-color);
+    height: 8px;
+    position: absolute;
+    left: 153px;
+    top: 6px;
+    transform: rotate(45deg);
+}
+
+.view::after {
+    content: '';
+    width: 16px;
+    background-color: var(--alt-text-color);
+    height: 2.5px;
+    position: absolute;
+    left: 147px;
+    top: 10px;
+    transform: rotate(180deg);
+}
+
+.items {
+    position: relative;
+    bottom: -21px;
+    height: auto;
+    width: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.item {
+    height: 230px;
+    width: 288px;
+    background-color: var(--gray-color);
+    display: inline-block;
+    margin-right: 14px;
+    border-radius: 19px;
+    background-image: url(./public/DelPaso.jpg);
+    background-repeat: no-repeat;
+    background-size: 289px;
+
+}
+
+.item:first-child {
+    margin-left: 28px;
+}
+
+.mainImg {
+    position: absolute;
+    left: 49%;
+    top: 21px;
+    width: 49%;
+}
+
+.category {
+    position: fixed;
+    color: var(--text-color);
+    left: 28px;
+    top: 22px;
+    border-radius: 8px;
+    border: var(--text-color) solid 2px;
+    padding: 9px 36px 7px 12px;
+    font-family: Tajawal;
+    font-weight: 700;
+    z-index: 2;
+    font-size: 22px;
+}
+
+.category::after {
+    position: absolute;
+    content: '';
+    border-bottom: solid var(--text-color) 2px;
+    border-left: solid var(--text-color) 2px;
+    width: 10px;
+    height: 10px;
+    right: 13px;
+    top: 12px;
+    transform: rotate(-45deg);
+    border-radius: 0 0 0 2px;
+}
+
+.profile,
+.contact,
+.portfolioTab,
+.preview {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 50px;
+    background-color: var(--background-color);
+
+    visibility: hidden;
+
+}
+
+.profilePic {
+    width: 45%;
+    border-radius: 128px;
+    position: relative;
+}
+
+.info {
+    padding-top: 24%;
+    text-align: center;
+}
+
+.info h1,
+.info h2 {
+    color: var(--text-color);
+    font-family: 'Tajawal', sans-serif;
+}
+
+.info h1 {
+    margin-bottom: 0;
+}
+
+.profileCity {
+    color: var(--gray-color) !important;
+    margin-top: -4px;
+    font-weight: 500;
+}
+
+.profileDescription {
+    font-size: 20px;
+    margin-top: -8px;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.skills {
+    font-family: 'Tajawal', sans-serif;
+    padding: 4px 28px 28px 28px;
+}
+
+.skillsLabel {
+    color: var(--gray-color);
+    margin-top: 8px;
+}
+
+.skill {
+    color: var(--text-color);
+    padding: 4px 12px 4px 12px;
+    border: solid 1px var(--text-color);
+    border-radius: 6px;
+    margin-right: 4px;
+    display: inline-flex;
+    margin-bottom: 12px;
+}
+
+.form {
+    padding: 28px;
+    padding-top: 0;
+    left: 0;
+    right: 0;
+}
+
+.contact h1 {
+    padding-top: 24%;
+    color: var(--text-color);
+    font-family: 'Tajawal', sans-serif;
+    text-align: center;
+}
+
+.name,
+.email,
+.msg {
+    display: block;
+    width: 100%;
+    position: relative;
+    height: 36px;
+    margin-bottom: 28px;
+    padding: 0;
+}
+
+.msg {
+    height: 144px;
+
+}
+
+label,
+textarea {
+    position: relative;
+    top: -8px;
+    color: var(--text-color);
+    font-family: 'Tajawal', sans-serif;
+    font-size: 20px;
+    padding: 0;
+}
+
+
+textarea {
+    color: black;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.sendMsg {
+    position: relative;
+    font-size: 20px;
+    font-family: 'Tajawal', sans-serif;
+    font-weight: 700;
+    width: 100%;
+    height: 40px;
+
+}
+
+.portfolioTab {
+    visibility: hidden;
+}
+
+.topNav {
+    left: 0;
+    right: 0;
+    height: 88px;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.links {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    margin: 0;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 18px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 43px;
+}
+
+.fa-github,
+.fa-linkedin {
+    color: var(--text-color);
+    position: relative;
+    top: 5px;
+    left: 67px;
+}
+
+.preview {
+    top: 80px;
+}
+
+.exitPreview {
+    width: 60px;
+    height: 60px;
+    right: 0;
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+}
+
+.exitPreview:before,
+.exitPreview:after {
+    content: '';
+    opacity: 2;
+    width: 40px;
+    height: 5px;
+    background-color: var(--text-color);
+    display: block;
+    transform: rotate(45deg);
+    top: 26px;
+    position: absolute;
+    left: 10px;
+    border-radius: 10px;
+
+}
+
+.exitPreview:after {
+    transform: rotate(-45deg);
+}
+
+.previewImg{
+    width: 100vw;
+    height: auto;
+}
